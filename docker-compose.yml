@@ -13,10 +13,12 @@ services:
     build: .
     restart: always
     image: occurrence-api
-    command: npm start
+    command: npm run debug
     volumes:
-      - ./dist:/usr/workspace/occurrence-api/dist
+      - ./dist:/usr/src/occurrence-api/dist
+      - ./package.json:/usr/src/occurrence-api/package.json
     ports:
       - "5050:5050"
+      - "9222:9222"
     links:
       - mongo

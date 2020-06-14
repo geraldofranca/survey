@@ -1,4 +1,4 @@
 FROM node:12
-WORKDIR /usr/workspace/occurrence-api
+WORKDIR /usr/src/occurrence-api
 COPY ./package.json .
 RUN npm install --only=prod
